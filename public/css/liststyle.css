@@ -1,0 +1,212 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(223, 226, 231);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main {
+  margin-top: 20px;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 1px 5px 0px #bbb;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  outline: none;
+}
+
+ul {
+  /* list-style-image: url("/images/check-square-regular.svg"); */
+  /* list-style: disc; */
+  padding-left: 0;
+  font-size: 24px;
+  width: 100%;
+}
+li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 5px 20px;
+  padding: 8px 25px;  
+  list-style: decimal;
+  text-align: start;
+}
+li[aria-checked="true"] {
+  color: gray;
+  text-decoration: line-through;
+  /* list-style-image: url("/images/check-square-regular.svg"); */
+}
+
+#completed-message {
+  visibility: hidden;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-weight: bold;
+  background: rgb(241, 233, 248);
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.wrapper {
+  /* position: absolute; */
+  display: block;
+  width: 20px;
+  /* right: 0; */
+  /* margin: 4em auto 0; */
+}
+
+
+
+/* checkbox css */
+
+  
+/* @charset "UTF-8"; */
+.toggler-wrapper {
+	display: block;
+	width: 45px;
+	height: 25px;
+	cursor: pointer;
+	position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+	background-color: #44cc66;
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: absolute;
+	border-radius: 100px;
+	top: 0;
+	left: -44px;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+
+/*--------------------------------------------------------------
+3.0 Effects Styles 
+--------------------------------------------------------------*/
+
+/*Style 23*/
+
+.toggler-wrapper.style-23 input[type="checkbox"]:checked+.toggler-slider {
+	background-color: transparent;
+	border-color: #44cc66;
+}
+
+.toggler-wrapper.style-23 input[type="checkbox"]:checked+.toggler-slider:before {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 0.7;
+}
+
+.toggler-wrapper.style-23 input[type="checkbox"]:checked+.toggler-slider:after {
+	opacity: 0;
+	-webkit-transform: translateY(20px);
+	transform: translateY(20px);
+}
+
+.toggler-wrapper.style-23 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+	left: calc(100% - 19px - 3px);
+	background-color: #44cc66;
+}
+
+.toggler-wrapper.style-23 .toggler-slider {
+	background-color: transparent;
+	border: 2px solid #eb4f37;
+}
+
+.toggler-wrapper.style-23 .toggler-slider:before {
+	content: 'DONE';
+	position: absolute;
+	top: -1px;
+	right: -59px;
+	font-size: 75%;
+	/* text-transform: uppercase; */
+	font-weight: 500;
+	opacity: 0;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+}
+
+.toggler-wrapper.style-23 .toggler-slider:after {
+	content: 'To-Do';
+	position: absolute;
+    top: -2px;
+    right: -59px;
+	font-size: 75%;
+	/* text-transform: uppercase; */
+	font-weight: 500;
+	opacity: 0.7;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-23 .toggler-knob {
+	width: calc(25px - 6px);
+	height: calc(25px - 6px);
+	border-radius: 50%;
+	left: 3px;
+	top: 2px;
+	background-color: #eb4f37;
+}
+
+@media only screen and (max-width: 768px) {
+  ul{
+    font-size: 18px;
+  }
+  .toggler-wrapper .toggler-slider {
+    left: -28px;
+  }
+  .toggler-wrapper.style-23 .toggler-slider:after, .toggler-wrapper.style-23 .toggler-slider:before{
+    right: -44px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  input{
+    width: 180px;
+  }
+}

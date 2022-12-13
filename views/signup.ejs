@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SignUp @ TO-Do-List</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" action="/signup" method="post">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" name="name" placeholder="User name">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-envelope"></i>
+					<input type="email" class="login__input" name="email" placeholder="User Email">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" name="password" class="login__input" placeholder="Password">
+				</div>
+				<span><h4><% errorMsg %> </h4></span>
+				<button class="button login__submit" onclick="this.form.submit()">
+					<span class="button__text">Sign Up Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>Alreay have Account?</h3>
+				<h4><a href="/">Login Here</a></h4>
+			</div>
+		</div>	
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>			
+	</div>
+</div>
+</body>
+</html>
