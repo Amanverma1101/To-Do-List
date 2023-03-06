@@ -1,5 +1,5 @@
 const firebase = require("firebase-admin");
-const credentials = require("./key.json");
+const credentials = require("../key.json");
 const firebaseConfig = {
   apiKey: "AIzaSyDs0Y1x828BlG6ojCA_EnKdsisshNJ3XZ8",
   authDomain: "todolist-df8cf.firebaseapp.com",
